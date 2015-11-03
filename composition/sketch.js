@@ -81,6 +81,10 @@ function draw()
   ellipse(xpos, 300, 25, 25);
   ellipse(xpos, 200, 25, 25);
   ellipse(xpos, 100, 25, 25);
+  ellipse(xpos, 400, 25, 25);
+  ellipse(xpos, 500, 25, 25);
+  ellipse(xpos, 550, 25, 25);
+  
   fill("white");
   
       triangle(40,70,400,500,20,420);

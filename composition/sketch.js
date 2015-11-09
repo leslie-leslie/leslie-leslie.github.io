@@ -2,7 +2,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 }
 
-function draw() {
+//function draw() {
 	// place your drawing code here
 //	background("grey");
 //	fill(10,50,50);
@@ -22,28 +22,7 @@ function draw() {
   //  quad(100,100,150,170,200,270,120,180);
 
 
-}
-
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
-
-
-function draw() {
-    background('hsl(150, 100%, 80%)')
-    
-    triangle(40,70,400,500,20,420);
-            triangle(40,60,300,500,20,320);
-                triangle(40,50,200,400,20,220);
-                  triangle(40,40,400,500,20,120);
-
-        triangle(40,70,100,400,20,420);
-            triangle(40,60,100,300,20,320);
-                triangle(40,50,100,200,20,220);
-                  triangle(40,40,200,100,20,120);
-    
-
-}
+//}
 
 // x position variable
 var xpos = 0;
@@ -52,10 +31,21 @@ var xpos = 0;
 var speed = 2;
  
 
-function draw() 
-{
- 
-     background('hsl(150, 100%, 80%)')
+function draw() {
+    background('hsl(150, 100%, 80%)')
+
+
+    
+ var mousepercent = 'hsl(150, ' + ((mouseX/width) * 100) + '%, ' + ((mouseY/width) * 100) + '%)';
+     background( mousepercent )
+     
+       fill(0);
+  stroke(255);
+  textSize(64);
+    text('.......', 300, 340);
+    
+  triangle (50,20,mouseX,mouseY,750,200);
+
 
   // set the fill color
   fill(255, 0, 0);
@@ -73,9 +63,10 @@ function draw()
   if((xpos > width) || (xpos < 0))
   {
     speed = speed * -1;
+     
   }
- 
-  // draw a circle
+  
+// draw a circle
   ellipse(xpos, 50, 25, 25);
   ellipse(xpos, 370, 25, 25);
   ellipse(xpos, 300, 25, 25);
@@ -84,20 +75,31 @@ function draw()
   ellipse(xpos, 400, 25, 25);
   ellipse(xpos, 500, 25, 25);
   ellipse(xpos, 550, 25, 25);
+  ellipse(xpos, 650, 25, 25);
+  ellipse(xpos, 620, 25, 25);
+  ellipse(xpos, 505, 25, 25);
+  ellipse(xpos, 15, 25, 25);
+  ellipse(xpos, 410, 25, 25);
+  ellipse(xpos, 1000, 25, 25);
+  ellipse(xpos, 1010, 25, 25);
+
+
+  
+
   
   fill("white");
   
       triangle(40,70,400,500,20,420);
             triangle(40,60,300,500,20,320);
                 triangle(40,50,200,400,20,220);
-                  triangle(40,40,400,500,20,120);
+                  triangle(40,40,mouseX,mouseY,20,120);
+
 
         triangle(40,70,100,400,20,420);
             triangle(40,60,100,300,20,320);
                 triangle(40,50,100,200,20,220);
                   triangle(40,40,200,100,20,120);
-  
- 
-  
-}
+                  
 
+
+}
